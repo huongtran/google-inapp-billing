@@ -26,6 +26,13 @@ public interface BillingEventListener {
     void onPurchasedProductsFetched(@NonNull SkuType skuType, @NonNull List<PurchaseInfo> purchases);
 
     /**
+     * Callback will be triggered when no purchased products are queried from Play Console
+     *
+     * @param skuType - the type of SKU, either INAPP or SUBS
+     */
+    void onNoPurchasedProductsFetched(@NonNull SkuType skuType);
+
+    /**
      * Callback will be triggered when a product is purchased successfully
      *
      * @param purchases - a list with purchased products
